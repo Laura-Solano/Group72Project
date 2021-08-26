@@ -25,7 +25,7 @@ const App = () => {
 
   return (
     <div className="location">
-      <button onClick={getLocation}>Look into the Ball</button>
+      <button onClick={getLocation}>Look into the Crystal Ball</button>
       <p>{status}</p>
       <h2>Your earthbound presence is found:</h2>
       {lat && <p>Latitude: {lat}</p>}
