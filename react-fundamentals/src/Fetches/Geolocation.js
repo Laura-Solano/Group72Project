@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const App = () => {
+const Geolocation = () => {
   const [lat, setLat] = useState(null);
   const [lng, setLng] = useState(null);
   const [status, setStatus] = useState(null);
@@ -25,7 +25,9 @@ const App = () => {
 
   return (
     <div className="location">
-      <button onClick={getLocation}>Look into the Ball</button>
+      <button id="button" onClick={getLocation}>
+        Look into the Ball
+      </button>
       <p>{status}</p>
       <h2>Your earthbound presence is found:</h2>
       {lat && <p>Latitude: {lat}</p>}
@@ -34,4 +36,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Geolocation;
