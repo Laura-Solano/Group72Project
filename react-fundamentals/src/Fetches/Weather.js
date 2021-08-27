@@ -32,7 +32,7 @@ function Weather() {
           <p>{data.weather[0].main}</p>
         </div>
       ) : (
-        <p>Not in the start today</p>
+        <p>Not in the stars today</p>
       )}
     </div>
   );

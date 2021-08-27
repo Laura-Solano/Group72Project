@@ -29,7 +29,7 @@ const Geolocation = () => {
         Look into the Ball
       </button>
       <p>{status}</p>
-      <h2>Your earthbound presence is found:</h2>
+      <h2>Your earthbound presence is found at:</h2>
       {lat && <p>Latitude: {lat}</p>}
       {lng && <p>Longitude: {lng}</p>}
     </div>
