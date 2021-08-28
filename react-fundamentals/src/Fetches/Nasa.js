@@ -5,7 +5,7 @@ const Nasa = (props) => {
     // const [data, setData] = useState("");
     // const apiUrl = "https://api.nasa.gov/planetary/earth/imagery?lon=100.75&lat=1.5&date=2014-02-01&api_key=aQ9KhcBPKDLzXmSYJu8UV7whEL5PHvofMqYcOhU1"
     let date = moment().date()
-    let month = moment().month()
+    let month = moment().add(1, 'months').month()
     let year = moment().year()
 
     const [lat, setLat] = useState("");
@@ -19,7 +19,7 @@ const Nasa = (props) => {
         setLon(position.coords.longitude);
       });
 
-      await fetch(`https://api.nasa.gov/planetary/earth/imagery?lon=${lon}&lat=${lat}&date=${year}-${month}-${date}&api_key=aQ9KhcBPKDLzXmSYJu8UV7whEL5PHvofMqYcOhU1`)
+      await fetch(`https://api.nasa.gov/planetary/earth/imagery?lon=${lat}&lat=${lon}&date=${year}-${month}-${date}&api_key=aQ9KhcBPKDLzXmSYJu8UV7whEL5PHvofMqYcOhU1`)
       .then(res => res)
       .then(result => {
         setData(result.url)
