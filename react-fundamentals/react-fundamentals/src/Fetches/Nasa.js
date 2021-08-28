@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
 const Nasa = (props) => {
-  let date = moment().subtract(1, "days").date();
-  let month = moment().month();
+  let date = moment().subtract(3, "days").date();
+  let month = moment().add(1, "months").month();
   let year = moment().year();
   const [lat, setLat] = useState("");
   const [lon, setLon] = useState("");
@@ -36,7 +36,7 @@ const Nasa = (props) => {
         <p>Your earthly presence is lost in the mists</p>
       )}
       <p>
-        Date: {month}/{date}/{year}
+        Image Date: {month}/{date}/{year}
       </p>
     </div>
   );
